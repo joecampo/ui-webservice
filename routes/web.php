@@ -5,8 +5,8 @@ use App\ContactForm;
 
 Route::get('/', function () {
     $client = new SoapClient(env('WSDL'), [
-        'cache_wsdl'         => WSDL_CACHE_NONE,
-        'soap_version'       => SOAP_1_1,
+        'cache_wsdl' => WSDL_CACHE_NONE,
+        'soap_version' => SOAP_1_1,
     ]);
 
     $form = new ContactForm();
